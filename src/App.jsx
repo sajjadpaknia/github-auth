@@ -24,7 +24,6 @@ function App() {
     },
     (err) => {
       if (err.response?.status === 401) {
-        console.log("errrorrrrrrr");
         logout();
       }
       return Promise.reject(err);

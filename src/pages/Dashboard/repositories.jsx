@@ -1,40 +1,23 @@
 import { useEffect, useState } from "react";
-import { useAuth } from "../../context/auth";
 import classes from "./repositories.module.css";
 import axios from "axios";
 
-function Repositories({ repoURL }) {
-  const { setIsLoggedIn } = useAuth();
+function Repositories() {
   const [repos, setRepos] = useState([]);
   const [token, setToken] = useState(localStorage.getItem("access_token"));
   useEffect(() => {
-    console.log(token);
     const getRepos = async () => {
       await axios
         .get("https://api.github.com/users/sajjadpaknia/repos", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((res) => {
-          console.log(res.data);
           setRepos(res.data);
         });
     };
     getRepos();
   }, [token]);
-  const downloadRepo = async () => {
-    await axios
-      .get("https://github.com/sajjadpaknia/dalbi/zipball/master/", {
-        headers: {
-          Accept: "application/vnd.github+json",
-          "Content-Type": "application/json;charset=UTF-8",
-          "Access-Control-Allow-Origin": "*",
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((res) => {
-        console.log(res);
-      });
-  };
+
   return (
     <>
       <p className={classes.title_heading}>Repositories ({repos.length})</p>

@@ -10,7 +10,6 @@ function Dashboard() {
   const [repoURL, setRepoURL] = useState("");
   const [token, setToken] = useState(localStorage.getItem("access_token"));
   useEffect(() => {
-    console.log(userData);
     const getUserData = async () => {
       await axios
         .get("https://api.github.com/user", {
