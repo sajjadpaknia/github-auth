@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  gap: 1rem;
+  position: relative;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+}
+.container > div {
+  padding: 3rem 2rem;
+}
+.profile_pic {
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.bio {
+  margin-bottom: 2rem;
+}
+.sub_bio {
+  display: flex;
+  gap: 2rem;
+}
+.sub_bio span {
+  margin-right: 0.5rem;
+}
+@media (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    text-align: center;
+  }
+  .profile_pic {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 200px;
+  }
+  .sub_bio {
+    justify-content: center;
+  }
+}

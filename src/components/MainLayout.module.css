@@ -1,0 +1,10 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}

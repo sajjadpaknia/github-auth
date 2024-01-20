@@ -1,0 +1,29 @@
+.repo_list_item {
+  border-radius: 1rem;
+  padding: 1.5rem 2rem 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: rgb(224, 224, 224);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.repo_detail {
+  margin-left: 1rem;
+}
+.repo_detail h1 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.repo_download {
+  cursor: pointer;
+  margin-left: auto;
+}
+.title_heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
